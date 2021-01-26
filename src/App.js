@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
   return (
     <main className="react-calculator">
-      <Result/>
+      <Result value={0}/>
       <Numbers/>
       <Functions/>
       <Operations/>

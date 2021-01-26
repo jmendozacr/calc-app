@@ -1,11 +1,21 @@
 import React from "react";
+import PropTypes from "prop-types";
 
-const Result = () => {
+const Result = ({ value }) => {
+
   return (
-      <div className="result">
-        0
-      </div>
-    );
-  }
-  
-  export default Result;
+    <div className="result">
+      {value}
+    </div>
+  );
+}
+
+Result.propTypes = {
+  value: PropTypes.number.isRequired
+}
+
+Result.defaultProps = {
+  value: 10
+}
+
+export default Result;
