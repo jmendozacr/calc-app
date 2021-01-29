@@ -3,12 +3,12 @@ import Button from "./Button/Button";
 import PropTypes from "prop-types";
 import "./Button/Button.css"
 
-const textNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
 const renderButtons = onClickNumber => {
-  return textNumber.map((item, index) => {
-    return <Button text={item} key={index} clickHandler={onClickNumber}/>
+  return numbers.map((number) => {
+    return <Button text={`${number}`} key={number} clickHandler={onClickNumber}/>
   })
-}
+};
 
 const Numbers = ({ onClickNumber }) => (
   <section className="numbers">
@@ -21,6 +21,6 @@ const Numbers = ({ onClickNumber }) => (
 
 Numbers.prototype = {
   onClickNumber: PropTypes.func.isRequired
-}
+};
  
 export default Numbers;
