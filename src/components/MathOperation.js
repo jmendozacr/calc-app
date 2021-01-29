@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../components/Button";
+import Button from "./Button/Button";
 import PropTypes from "prop-types";
 
 const MathOperation = ({onClickOperation, onClickEqual}) => (
