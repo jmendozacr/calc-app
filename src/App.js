@@ -20,10 +20,10 @@ const App = () => {
         setStack(`${stack}${number}`);
       }}/>
       <Functions
-        onContentClear={clear => {
+        onContentClear={() => {
           setStack("");
         }}
-        onDelete={deleteText => {
+        onDelete={() => {
           if(stack.length > 0) {
             const newStack = stack.substring(0, stack.length - 1);
             setStack(newStack);
